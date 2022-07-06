@@ -1,31 +1,31 @@
-.filter_select_new > label {
+.filter_select > label {
     display: block;
     margin-bottom: 10px;
     font-size: 16px;
     color: #222;
 }
-.filter_select_new > span {
+.filter_select > span {
     font-size: 14px;
     color: #bababa;
     cursor: pointer;
 }
-.filter_select_new > input {
+.filter_select > input {
     position: absolute;
     border: none;
     outline: none;
     cursor: pointer;
 }
-.filter_select_new > input::placeholder {
+.filter_select > input::placeholder {
     font-size: 14px;
     color: #bababa;
     cursor: pointer;
 }
-.filter_select_new {
+.filter_select {
     position: relative;
     width: 300px;
     height: 50px;
 }
-.filter_select_new > .options {
+.filter_select > .options {
     display: none;
     position: absolute;
     top: 70px;
@@ -37,10 +37,10 @@
     box-shadow: 0 8px 30px 0 rgba(165, 189, 213, 0.22);
     border: solid 1px #ededed;
 }
-.filter_select_new > .active {
+.filter_select > .active {
     display: block;
 }
-.filter_select_new > .options > div {
+.filter_select > .options > div {
     margin-bottom: 20px;
     margin: 0 0 20px;
     font-size: 14px;
@@ -49,25 +49,25 @@
     color: #222;
     cursor: pointer;
 }
-.filter_select_new > .option_scroll {
+.filter_select > .option_scroll {
     height: 150px;
     overflow-y: scroll;
     scrollbar-width: thin;
     scrollbar-color: #6969dd #e0e0e0;
 }
-.filter_select_new > .options > div:hover {
+.filter_select > .options > div:hover {
     color: #0046a6;
 }
 
 /* Scrollbar */
-.filter_select_new > .option_scroll::-webkit-scrollbar {
+.filter_select > .option_scroll::-webkit-scrollbar {
     width: 5px;
 }
-.filter_select_new > .option_scroll::-webkit-scrollbar-track {
+.filter_select > .option_scroll::-webkit-scrollbar-track {
     width: 5px;
     background: #ededed;
 }
-.filter_select_new > .option_scroll::-webkit-scrollbar-thumb {
+.filter_select > .option_scroll::-webkit-scrollbar-thumb {
     background: #222;
     border-radius: 2px;
 }

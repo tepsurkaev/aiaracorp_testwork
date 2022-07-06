@@ -34,18 +34,6 @@
     align-items: center;
     padding: 15px;
 }
-.filter_select > select {
-    appearance: none;
-    background-color: transparent;
-    border: none;
-    outline: none;
-    margin: 10px 0 0 0;
-    width: 100%;
-    font-family: inherit;
-    cursor: pointer;
-    line-height: inherit;
-    color: rgb(158, 158, 158);
-}
 .filter_bottom,
 .reset_icon {
     display: flex;
