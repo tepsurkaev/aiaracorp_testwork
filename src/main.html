@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/global.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/header.css">
+    <link rel="stylesheet" href="./assets/css/about.css">
+    <link rel="stylesheet" href="./assets/css/credit_packs.css">
+    <link rel="stylesheet" href="./assets/css/film_list.css">
+    <link rel="stylesheet" href="./assets/css/search_filter.css">
+    <link rel="stylesheet" href="./assets/css/footer.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+    <title>Aiaracorp</title>
+</head>
+<body>
+
+    <div class="main">
+        <header class="bg_header">
+            <div class="logo">
+                <img src="./assets/images/logo.webp" alt="logo">
+            </div>
+            <nav class="menu_list">
+                <ul>
+                    <li>PATTERN</li>
+                    <li>PRICING</li>
+                    <li>SUPPORT</li>
+                    <li>ULTRAFIT SHOP</li>
+                </ul>
+            </nav>
+            <div class="actions">
+                <button class="btn edit_btn">EDIT & PLOT</button>
+                <button class="btn sell_btn">SELL PATTERN</button>
+            </div>
+            <div class="icon_account">
+                <svg xmlns="http://www.w3.org/2000/svg" width="31" height="31" viewBox="0 0 31 31">
+                    <path data-name="패스 15303" d="M14.579 17.534a1.657 1.657 0 0 0-.414 0 5.652 5.652 0 1 1 .414 0z" transform="translate(1.128 .615)" style="fill:#222"/>
+                    <path data-name="패스 15304" d="M25.48 21.353a14.969 14.969 0 0 1-20.22 0 5.518 5.518 0 0 1 2.655-3.87 14.6 14.6 0 0 1 14.91 0 5.518 5.518 0 0 1 2.655 3.87z" transform="translate(.13 5.217)" style="fill:#222"/>
+                    <path data-name="패스 15305" d="M17 32A15 15 0 1 0 2 17a15 15 0 0 0 15 15z" style="fill:none;stroke:#222;stroke-linecap:round;stroke-linejoin:round" transform="translate(-1.5 -1.5)"/>
+                </svg>
+            </div>
+        </header>
+        <section class="img_main_banner">
+            <div class="film_search">
+                <h1>Find Your Paint Protection Film Cutting File.</h1>
+                <div class="bg_filter">
+                    <div class="filter_header">
+                        <div class="filter_select_new">
+                            <label for="location">Location</label>
+                            <input class="select_location" type="text" placeholder="Select Location">
+                            <div class="options options_location">
+                                <div onclick="getLocation('CANADA & USE')">CANADA & USE</div>
+                                <div onclick="getLocation('EUROPE')">EUROPE</div>
+                                <div onclick="getLocation('SOUTH KOREA')">SOUTH KOREA</div>
+                            </div>
+                        </div>
+                        <div class="filter_select_new">
+                            <label for="location">Year</label>
+                            <input class="select_year" type="text" placeholder="Select Year">
+                            <div class="options option_scroll options_year">
+                                <div onclick="getYear('2022')">2022</div>
+                                <div onclick="getYear('2021')">2021</div>
+                                <div onclick="getYear('2020')">2020</div>
+                                <div onclick="getYear('2019')">2019</div>
+                                <div onclick="getYear('2018')">2018</div>
+                                <div onclick="getYear('2017')">2017</div>
+                            </div>
+                        </div>
+                        <div class="filter_select_new">
+                            <label for="location">Make</label>
+                            <input class="select_make" type="text" placeholder="Select Make">
+                            <div class="options option_scroll options_make">
+                                <div onclick="getMake('TOYOTA')">TOYOTA</div>
+                                <div onclick="getMake('GENESIS')">GENESIS</div>
+                                <div onclick="getMake('CADILLAC')">CADILLAC</div>
+                                <div onclick="getMake('CHRYSLER')">CHRYSLER</div>
+                                <div onclick="getMake('NISSAN')">NISSAN</div>
+                                <div onclick="getMake('Mersedes BENZ')">Mersedes BENZ</div>
+                            </div>
+                        </div>
+                        <div class="filter_select_new">
+                            <label for="location">Model</label>
+                            <input class="select_model" type="text" placeholder="Select Model">
+                            <div class="options option_scroll options_model">
+                                <div onclick="getModel('CAMRY')">CAMRY</div>
+                                <div onclick="getModel('G70')">G70</div>
+                                <div onclick="getModel('CTS')">CTS</div>
+                                <div onclick="getModel('PACIFICA')">PACIFICA</div>
+                                <div onclick="getModel('ARMADA')">ARMADA</div>
+                                <div onclick="getModel('GLC COUPE')">GLC COUPE</div>
+                            </div>
+                        </div>
+                        <div class="filter_select_new">
+                            <label for="location">Sub-Model</label>
+                            <input class="select_sub_model" type="text" placeholder="Select Sub-Model">
+                            <div class="options option_scroll options_sub_model">
+                                <div onclick="getSubModel('XLE HYPBRID')">XLE HYPBRID</div>
+                                <div onclick="getSubModel('ELITE')">ELITE</div>
+                                <div onclick="getSubModel('PREMIUM LUXURY')">PREMIUM LUXURY</div>
+                                <div onclick="getSubModel('TOURING')">TOURING</div>
+                                <div onclick="getSubModel('PLATINUM RESERVE')">PLATINUM RESERVE</div>
+                                <div onclick="getSubModel('AMG GLC 43')">AMG GLC 43</div>
+                            </div>
+                        </div>
+                        <div class="filter_select_new">
+                            <label for="location">Series</label>
+                            <input class="select_series" type="text" placeholder="Select Series">
+                            <div class="options option_scroll options_series">
+                                <div onclick="getSeries('SERIES 1')">SERIES 1</div>
+                                <div onclick="getSeries('SERIES 2')">SERIES 2</div>
+                                <div onclick="getSeries('SERIES 3')">SERIES 3</div>
+                                <div onclick="getSeries('SERIES 4')">SERIES 4</div>
+                                <div onclick="getSeries('SERIES 5')">SERIES 5</div>
+                                <div onclick="getSeries('SERIES 6')">SERIES 6</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filter_bottom">
+                        <button class="btn btn_search">SEARCH</button>
+                        <div class="reset_icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="15" viewBox="0 0 14 15">
+                                <path data-name="패스 15495" d="M7 14.756A7.117 7.117 0 0 1 2.058 12.8 6.525 6.525 0 0 1 0 8.046a6.868 6.868 0 0 1 7-6.705 8.34 8.34 0 0 1 2.309.328.54.54 0 0 1-.3 1.038A7.266 7.266 0 0 0 7 2.422a5.786 5.786 0 0 0-5.923 5.625 5.452 5.452 0 0 0 1.723 3.97A6.052 6.052 0 0 0 7 13.676a5.787 5.787 0 0 0 5.923-5.624 5.408 5.408 0 0 0-.988-3.115.539.539 0 1 1 .882-.62A6.485 6.485 0 0 1 14 8.052a6.866 6.866 0 0 1-7 6.704z" transform="translate(0 .244)" style="fill:#222"/>
+                                <path data-name="선 62" d="M2.026 2.469a.5.5 0 0 1-.348-.141L-.349.359a.5.5 0 0 1-.01-.707.5.5 0 0 1 .707-.01L2.374 1.61a.5.5 0 0 1-.349.859z" transform="translate(8.048 .5)" style="fill:#222"/>
+                                <path data-name="선 63" d="M0 1.956a.5.5 0 0 1-.426-.238.5.5 0 0 1 .164-.688L2.1-.426a.5.5 0 0 1 .688.163.5.5 0 0 1-.163.688L.262 1.882A.5.5 0 0 1 0 1.956z" transform="translate(7.698 2.469)" style="fill:#222"/>
+                            </svg>
+                            <span>RESET</span>   
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="bg_filter">
+                    <div id="filter_header" class="filter_header">
+                        <div class="filter_select">
+                            <label for="location">Location</label>
+                            <select name="" id="location">
+                                <option class="selected" value="none" selected disabled hidden>Select Location</option>
+                                <option value="">CANADA & USA</option>
+                                <option value="">EUROPE</option>
+                                <option value="">SOUTH KOREA</option>
+                            </select>
+                        </div>
+                        <div class="filter_select">
+                            <label for="">Year</label>
+                            <select name="" id="year">
+                                <option class="selected" value="none" selected disabled hidden>Select Year</option>
+                                <option value="">2022</option>
+                                <option value="">2021</option>
+                                <option value="">2020</option>
+                            </select>
+                        </div>
+                        <div class="filter_select">
+                            <label for="">Make</label>
+                            <select name="" id="make">
+                                <option class="selected" value="none" selected disabled hidden>Select Make</option>
+                                <option value="">TOYOTA</option>
+                                <option value="">GENESIS</option>
+                                <option value="">CADILLAC</option>
+                                <option value="">CHRYSLER</option>
+                                <option value="">NISSAN</option>
+                                <option value="">Mersedes BENZ</option>
+                            </select>
+                        </div>
+                        <div class="filter_select">
+                            <label for="">Model</label>
+                            <select name="" id="model">
+                                <option class="selected" value="none" selected disabled hidden>Select Model</option>
+                                <option value="">CAMRY</option>
+                                <option value="">G70</option>
+                                <option value="">CTS</option>
+                                <option value="">PACIFICA</option>
+                                <option value="">ARMADA</option>
+                                <option value="">GLC COUPE</option>
+                            </select>
+                        </div>
+                        <div class="filter_select">
+                            <label for="">Sub-Model</label>
+                            <select name="" id="sub_model">
+                                <option class="selected" value="none" selected disabled hidden>Select Sub-Model</option>
+                                <option value="">XLE HYBRID</option>
+                                <option value="">ELITE</option>
+                                <option value="">PREMIUM LUXURY</option>
+                                <option value="">TOURING</option>
+                                <option value="">PLATINUM RESERVE</option>
+                                <option value="">AMG GLC 43</option>
+                            </select>
+                        </div>
+                        <div class="filter_select">
+                            <label for="">Series</label>
+                            <select name="" id="series">
+                                <option class="selected" value="none" selected disabled hidden>Select Series</option>
+                                <option value="">Series One</option>
+                                <option value="">Series Two</option>
+                                <option value="">Series Three</option>
+                                <option value="">Series Four</option>
+                                <option value="">Series Five</option>
+                                <option value="">Series Six</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="filter_bottom">
+                        <button class="btn btn_search">SEARCH</button>
+                        <div class="reset_icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="15" viewBox="0 0 14 15">
+                                <path data-name="패스 15495" d="M7 14.756A7.117 7.117 0 0 1 2.058 12.8 6.525 6.525 0 0 1 0 8.046a6.868 6.868 0 0 1 7-6.705 8.34 8.34 0 0 1 2.309.328.54.54 0 0 1-.3 1.038A7.266 7.266 0 0 0 7 2.422a5.786 5.786 0 0 0-5.923 5.625 5.452 5.452 0 0 0 1.723 3.97A6.052 6.052 0 0 0 7 13.676a5.787 5.787 0 0 0 5.923-5.624 5.408 5.408 0 0 0-.988-3.115.539.539 0 1 1 .882-.62A6.485 6.485 0 0 1 14 8.052a6.866 6.866 0 0 1-7 6.704z" transform="translate(0 .244)" style="fill:#222"/>
+                                <path data-name="선 62" d="M2.026 2.469a.5.5 0 0 1-.348-.141L-.349.359a.5.5 0 0 1-.01-.707.5.5 0 0 1 .707-.01L2.374 1.61a.5.5 0 0 1-.349.859z" transform="translate(8.048 .5)" style="fill:#222"/>
+                                <path data-name="선 63" d="M0 1.956a.5.5 0 0 1-.426-.238.5.5 0 0 1 .164-.688L2.1-.426a.5.5 0 0 1 .688.163.5.5 0 0 1-.163.688L.262 1.882A.5.5 0 0 1 0 1.956z" transform="translate(7.698 2.469)" style="fill:#222"/>
+                            </svg>
+                            <span>RESET</span>   
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </section>
+        <section class="film_list">
+            <h1>New Protection Film List</h1>
+            <div id="list" class="list">
+                <div class="list_item">
+                    <div class="list_item_header">
+                        <img class="badge" src="../src/assets/images/bedge.png" alt="badge">
+                        <div class="upload_date">
+                            <span>Upload date: 2021. 12. 01</span>
+                            <div class="bookmark_icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16.002" height="20" viewBox="0 0 16.002 20">
+                                    <path d="M20408.51 12897a2.243 2.243 0 0 1-1.15-.367l-4.5-2.709a1.827 1.827 0 0 0-1.723 0l-4.5 2.709a2.252 2.252 0 0 1-1.143.36 1.306 1.306 0 0 1-1.082-.54 2.5 2.5 0 0 1-.42-1.511v-14.086a3.72 3.72 0 0 1 3.557-3.856h8.881a3.736 3.736 0 0 1 3.564 3.856v14.086c.006 1.25-.58 2.058-1.484 2.058zm-6.508-10.33a.726.726 0 0 1 .371.093l1.139.676a1.32 1.32 0 0 0 .635.215.463.463 0 0 0 .375-.167 1.024 1.024 0 0 0 .08-.847l-.271-1.168a.834.834 0 0 1 .2-.691l.947-.942a.673.673 0 0 0-.4-1.25l-1.213-.2a.808.808 0 0 1-.533-.394l-.67-1.343c-.178-.352-.412-.545-.66-.545s-.479.193-.652.545l-.666 1.343a.811.811 0 0 1-.537.394l-1.209.2a.81.81 0 0 0-.7.47.8.8 0 0 0 .3.78l.943.942a.853.853 0 0 1 .2.691l-.273 1.168a1 1 0 0 0 .08.845.46.46 0 0 0 .375.166 1.308 1.308 0 0 0 .635-.212l1.137-.676a.759.759 0 0 1 .365-.093z" transform="translate(-20393.998 -12877)" style="fill:#fff"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="list_item_img">
+                        <img src="../src/assets/images/blueprints.png" alt="">
+                    </div>
+                    <div class="list_item_info">
+                        <h1>
+                            CANADA & USA > 2021 > TOYOTA > CAMRY > XLE HYBRID
+                        </h1>
+                        <span>OUT FRONT > BUMPER</span>
+                    </div>
+                    <div class="stars_block">
+                        <div class="stars">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16">
+                                <path d="m11.5 3 2.627 5.266 5.873.85-4.25 4.1 1 5.788-5.25-2.738L6.247 19l1-5.788L3 9.116l5.874-.85z" transform="translate(-3 -3)" style="fill:#ffd500"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16">
+                                <path d="m11.5 3 2.627 5.266 5.873.85-4.25 4.1 1 5.788-5.25-2.738L6.247 19l1-5.788L3 9.116l5.874-.85z" transform="translate(-3 -3)" style="fill:#ffd500"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16">
+                                <path d="m11.5 3 2.627 5.266 5.873.85-4.25 4.1 1 5.788-5.25-2.738L6.247 19l1-5.788L3 9.116l5.874-.85z" transform="translate(-3 -3)" style="fill:#ffd500"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16">
+                                <path d="m11.5 3 2.627 5.266 5.873.85-4.25 4.1 1 5.788-5.25-2.738L6.247 19l1-5.788L3 9.116l5.874-.85z" transform="translate(-3 -3)" style="fill:#ffd500"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16">
+                                <path d="m11.5 3 2.627 5.266 5.873.85-4.25 4.1 1 5.788-5.25-2.738L6.247 19l1-5.788L3 9.116l5.874-.85z" transform="translate(-3 -3)" style="fill:#ededed"/>
+                            </svg>
+                        </div>
+                        <div class="credits">
+                            <h1>20 Credits</h1>
+                            <span>11 downloads</span>
+                        </div>
+                    </div>
+                    <div class="author">
+                        <div class="by">
+                            <img src="../src/assets/images/img_profile.png" alt="avatar">
+                            <span>By carlover</span>
+                        </div>
+                        <div class="level">
+                            <img src="../src/assets/images/icon_beginner.png" alt="">
+                            <span>Beginner</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="list_item">
+                    <div class="list_item_header">
+                        <div class="upload_date">
+                            <span>Upload date: 2021. 11. 29</span>
+                            <div class="bookmark_icon bookmark_icon_off">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16.002" height="20" viewBox="0 0 16.002 20">
+                                    <path d="M20408.51 12897a2.243 2.243 0 0 1-1.15-.367l-4.5-2.709a1.827 1.827 0 0 0-1.723 0l-4.5 2.709a2.252 2.252 0 0 1-1.143.36 1.306 1.306 0 0 1-1.082-.54 2.5 2.5 0 0 1-.42-1.511v-14.086a3.72 3.72 0 0 1 3.557-3.856h8.881a3.736 3.736 0 0 1 3.564 3.856v14.086c.006 1.25-.58 2.058-1.484 2.058zm-6.508-10.33a.726.726 0 0 1 .371.093l1.139.676a1.32 1.32 0 0 0 .635.215.463.463 0 0 0 .375-.167 1.024 1.024 0 0 0 .08-.847l-.271-1.168a.834.834 0 0 1 .2-.691l.947-.942a.673.673 0 0 0-.4-1.25l-1.213-.2a.808.808 0 0 1-.533-.394l-.67-1.343c-.178-.352-.412-.545-.66-.545s-.479.193-.652.545l-.666 1.343a.811.811 0 0 1-.537.394l-1.209.2a.81.81 0 0 0-.7.47.8.8 0 0 0 .3.78l.943.942a.853.853 0 0 1 .2.691l-.273 1.168a1 1 0 0 0 .08.845.46.46 0 0 0 .375.166 1.308 1.308 0 0 0 .635-.212l1.137-.676a.759.759 0 0 1 .365-.093z" transform="translate(-20393.998 -12877)" style="fill:#fff"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="list_item_img">
+                        <img src="../src/assets/images/blueprints.png" alt="">
+                    </div>
+                    <div class="list_item_info">
+                        <h1>
+                            CANADA & USA > 2020 > GENESIS > G70 > ELITE
+                        </h1>
+                        <span>OUT FRONT > BUMPER</span>
+                    </div>
+                    <div class="stars_block">
+                        <div class="stars">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16">
+                                <path d="m11.5 3 2.627 5.266 5.873.85-4.25 4.1 1 5.788-5.25-2.738L6.247 19l1-5.788L3 9.116l5.874-.85z" transform="translate(-3 -3)" style="fill:#ffd500"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16">
+                                <path d="m11.5 3 2.627 5.266 5.873.85-4.25 4.1 1 5.788-5.25-2.738L6.247 19l1-5.788L3 9.116l5.874-.85z" transform="translate(-3 -3)" style="fill:#ffd500"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16">
+                                <path d="m11.5 3 2.627 5.266 5.873.85-4.25 4.1 1 5.788-5.25-2.738L6.247 19l1-5.788L3 9.116l5.874-.85z" transform="translate(-3 -3)" style="fill:#ffd500"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16">
+                                <path d="m11.5 3 2.627 5.266 5.873.85-4.25 4.1 1 5.788-5.25-2.738L6.247 19l1-5.788L3 9.116l5.874-.85z" transform="translate(-3 -3)" style="fill:#ededed"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16">
+                                <path d="m11.5 3 2.627 5.266 5.873.85-4.25 4.1 1 5.788-5.25-2.738L6.247 19l1-5.788L3 9.116l5.874-.85z" transform="translate(-3 -3)" style="fill:#ededed"/>
+                            </svg>
+                        </div>
+                        <div class="credits">
+                            <h1>18 Credits</h1>
+                            <span>11 downloads</span>
+                        </div>
+                    </div>
+                    <div class="author">
+                        <div class="by">
+                            <img src="../src/assets/images/img_profile_2.png" alt="avatar">
+                            <span>By carve</span>
+                        </div>
+                        <div class="level">
+                            <img src="../src/assets/images/icon_expert.png" alt="">
+                            <span>Expert</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="list_item">
+                    <div class="list_item_header">
+                        <div class="upload_date">
+                            <span>Upload date: 2021. 12. 01</span>
+                            <div class="bookmark_icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16.002" height="20" viewBox="0 0 16.002 20">
+                                    <path d="M20408.51 12897a2.243 2.243 0 0 1-1.15-.367l-4.5-2.709a1.827 1.827 0 0 0-1.723 0l-4.5 2.709a2.252 2.252 0 0 1-1.143.36 1.306 1.306 0 0 1-1.082-.54 2.5 2.5 0 0 1-.42-1.511v-14.086a3.72 3.72 0 0 1 3.557-3.856h8.881a3.736 3.736 0 0 1 3.564 3.856v14.086c.006 1.25-.58 2.058-1.484 2.058zm-6.508-10.33a.726.726 0 0 1 .371.093l1.139.676a1.32 1.32 0 0 0 .635.215.463.463 0 0 0 .375-.167 1.024 1.024 0 0 0 .08-.847l-.271-1.168a.834.834 0 0 1 .2-.691l.947-.942a.673.673 0 0 0-.4-1.25l-1.213-.2a.808.808 0 0 1-.533-.394l-.67-1.343c-.178-.352-.412-.545-.66-.545s-.479.193-.652.545l-.666 1.343a.811.811 0 0 1-.537.394l-1.209.2a.81.81 0 0 0-.7.47.8.8 0 0 0 .3.78l.943.942a.853.853 0 0 1 .2.691l-.273 1.168a1 1 0 0 0 .08.845.46.46 0 0 0 .375.166 1.308 1.308 0 0 0 .635-.212l1.137-.676a.759.759 0 0 1 .365-.093z" transform="translate(-20393.998 -12877)" style="fill:#fff"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="list_item_img">
+                        <img src="../src/assets/images/blueprints.png" alt="">
+                    </div>
+                    <div class="list_item_info">
+                        <h1>
+                            CANADA & USA > 2020 > CHRYSLER > PACIFICA > TOURING
+                        </h1>
+                        <span>OUT FRONT > BUMPER</span>
+                    </div>
+                    <div class="stars_block">
+                        <div class="stars">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16">
+                                <path d="m11.5 3 2.627 5.266 5.873.85-4.25 4.1 1 5.788-5.25-2.738L6.247 19l1-5.788L3 9.116l5.874-.85z" transform="translate(-3 -3)" style="fill:#ffd500"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16">
+                                <path d="m11.5 3 2.627 5.266 5.873.85-4.25 4.1 1 5.788-5.25-2.738L6.247 19l1-5.788L3 9.116l5.874-.85z" transform="translate(-3 -3)" style="fill:#ffd500"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16">
+                                <path d="m11.5 3 2.627 5.266 5.873.85-4.25 4.1 1 5.788-5.25-2.738L6.247 19l1-5.788L3 9.116l5.874-.85z" transform="translate(-3 -3)" style="fill:#ffd500"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16">
+                                <path d="m11.5 3 2.627 5.266 5.873.85-4.25 4.1 1 5.788-5.25-2.738L6.247 19l1-5.788L3 9.116l5.874-.85z" transform="translate(-3 -3)" style="fill:#ededed"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16">
+                                <path d="m11.5 3 2.627 5.266 5.873.85-4.25 4.1 1 5.788-5.25-2.738L6.247 19l1-5.788L3 9.116l5.874-.85z" transform="translate(-3 -3)" style="fill:#ededed"/>
+                            </svg>
+                        </div>
+                        <div class="credits">
+                            <h1>18 Credits</h1>
+                            <span>11 downloads</span>
+                        </div>
+                    </div>
+                    <div class="author">
+                        <div class="by">
+                            <img src="../src/assets/images/img_profile_3.png" alt="avatar">
+                            <span>By filmking</span>
+                        </div>
+                        <div class="level">
+                            <img src="../src/assets/images/icon_master.png" alt="">
+                            <span>Master</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="list_item">
+                    <div class="list_item_header">
+                        <div class="upload_date">
+                            <span>Upload date: 2021. 12. 01</span>
+                            <div class="bookmark_icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16.002" height="20" viewBox="0 0 16.002 20">
+                                    <path d="M20408.51 12897a2.243 2.243 0 0 1-1.15-.367l-4.5-2.709a1.827 1.827 0 0 0-1.723 0l-4.5 2.709a2.252 2.252 0 0 1-1.143.36 1.306 1.306 0 0 1-1.082-.54 2.5 2.5 0 0 1-.42-1.511v-14.086a3.72 3.72 0 0 1 3.557-3.856h8.881a3.736 3.736 0 0 1 3.564 3.856v14.086c.006 1.25-.58 2.058-1.484 2.058zm-6.508-10.33a.726.726 0 0 1 .371.093l1.139.676a1.32 1.32 0 0 0 .635.215.463.463 0 0 0 .375-.167 1.024 1.024 0 0 0 .08-.847l-.271-1.168a.834.834 0 0 1 .2-.691l.947-.942a.673.673 0 0 0-.4-1.25l-1.213-.2a.808.808 0 0 1-.533-.394l-.67-1.343c-.178-.352-.412-.545-.66-.545s-.479.193-.652.545l-.666 1.343a.811.811 0 0 1-.537.394l-1.209.2a.81.81 0 0 0-.7.47.8.8 0 0 0 .3.78l.943.942a.853.853 0 0 1 .2.691l-.273 1.168a1 1 0 0 0 .08.845.46.46 0 0 0 .375.166 1.308 1.308 0 0 0 .635-.212l1.137-.676a.759.759 0 0 1 .365-.093z" transform="translate(-20393.998 -12877)" style="fill:#fff"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="list_item_img">
+                        <img src="../src/assets/images/blueprints.png" alt="">
+                    </div>
+                    <div class="list_item_info">
+                        <h1>
+                            CANADA & USA > 2020 > CHRYSLER > PACIFICA > TOURING
+                        </h1>
+                        <span>OUT FRONT > BUMPER</span>
+                    </div>
+                    <div class="stars_block">
+                        <div class="stars">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16">
+                                <path d="m11.5 3 2.627 5.266 5.873.85-4.25 4.1 1 5.788-5.25-2.738L6.247 19l1-5.788L3 9.116l5.874-.85z" transform="translate(-3 -3)" style="fill:#ffd500"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16">
+                                <path d="m11.5 3 2.627 5.266 5.873.85-4.25 4.1 1 5.788-5.25-2.738L6.247 19l1-5.788L3 9.116l5.874-.85z" transform="translate(-3 -3)" style="fill:#ffd500"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16">
+                                <path d="m11.5 3 2.627 5.266 5.873.85-4.25 4.1 1 5.788-5.25-2.738L6.247 19l1-5.788L3 9.116l5.874-.85z" transform="translate(-3 -3)" style="fill:#ffd500"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16">
+                                <path d="m11.5 3 2.627 5.266 5.873.85-4.25 4.1 1 5.788-5.25-2.738L6.247 19l1-5.788L3 9.116l5.874-.85z" transform="translate(-3 -3)" style="fill:#ffd500"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16">
+                                <path d="m11.5 3 2.627 5.266 5.873.85-4.25 4.1 1 5.788-5.25-2.738L6.247 19l1-5.788L3 9.116l5.874-.85z" transform="translate(-3 -3)" style="fill:#ededed"/>
+                            </svg>
+                        </div>
+                        <div class="credits">
+                            <h1>18 Credits</h1>
+                            <span>11 downloads</span>
+                        </div>
+                    </div>
+                    <div class="author">
+                        <div class="by">
+                            <img src="../src/assets/images/img_profile_4.png" alt="avatar">
+                            <span>By benzz</span>
+                        </div>
+                        <div class="level">
+                            <img src="../src/assets/images/icon_beginner.png" alt="">
+                            <span>Advanced</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="list_item">
+                    <div class="list_item_header">
+                        <div class="upload_date">
+                            <span>Upload date: 2021. 12. 01</span>
+                            <div class="bookmark_icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16.002" height="20" viewBox="0 0 16.002 20">
+                                    <path d="M20408.51 12897a2.243 2.243 0 0 1-1.15-.367l-4.5-2.709a1.827 1.827 0 0 0-1.723 0l-4.5 2.709a2.252 2.252 0 0 1-1.143.36 1.306 1.306 0 0 1-1.082-.54 2.5 2.5 0 0 1-.42-1.511v-14.086a3.72 3.72 0 0 1 3.557-3.856h8.881a3.736 3.736 0 0 1 3.564 3.856v14.086c.006 1.25-.58 2.058-1.484 2.058zm-6.508-10.33a.726.726 0 0 1 .371.093l1.139.676a1.32 1.32 0 0 0 .635.215.463.463 0 0 0 .375-.167 1.024 1.024 0 0 0 .08-.847l-.271-1.168a.834.834 0 0 1 .2-.691l.947-.942a.673.673 0 0 0-.4-1.25l-1.213-.2a.808.808 0 0 1-.533-.394l-.67-1.343c-.178-.352-.412-.545-.66-.545s-.479.193-.652.545l-.666 1.343a.811.811 0 0 1-.537.394l-1.209.2a.81.81 0 0 0-.7.47.8.8 0 0 0 .3.78l.943.942a.853.853 0 0 1 .2.691l-.273 1.168a1 1 0 0 0 .08.845.46.46 0 0 0 .375.166 1.308 1.308 0 0 0 .635-.212l1.137-.676a.759.759 0 0 1 .365-.093z" transform="translate(-20393.998 -12877)" style="fill:#fff"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="list_item_img">
+                        <img src="../src/assets/images/blueprints.png" alt="">
+                    </div>
+                    <div class="list_item_info">
+                        <h1>
+                            CANADA & USA > 2020 > CHRYSLER > PACIFICA > TOURING
+                        </h1>
+                        <span>OUT FRONT > BUMPER</span>
+                    </div>
+                    <div class="stars_block">
+                        <div class="stars">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16">
+                                <path d="m11.5 3 2.627 5.266 5.873.85-4.25 4.1 1 5.788-5.25-2.738L6.247 19l1-5.788L3 9.116l5.874-.85z" transform="translate(-3 -3)" style="fill:#ffd500"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16">
+                                <path d="m11.5 3 2.627 5.266 5.873.85-4.25 4.1 1 5.788-5.25-2.738L6.247 19l1-5.788L3 9.116l5.874-.85z" transform="translate(-3 -3)" style="fill:#ffd500"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16">
+                                <path d="m11.5 3 2.627 5.266 5.873.85-4.25 4.1 1 5.788-5.25-2.738L6.247 19l1-5.788L3 9.116l5.874-.85z" transform="translate(-3 -3)" style="fill:#ffd500"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16">
+                                <path d="m11.5 3 2.627 5.266 5.873.85-4.25 4.1 1 5.788-5.25-2.738L6.247 19l1-5.788L3 9.116l5.874-.85z" transform="translate(-3 -3)" style="fill:#ffd500"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16">
+                                <path d="m11.5 3 2.627 5.266 5.873.85-4.25 4.1 1 5.788-5.25-2.738L6.247 19l1-5.788L3 9.116l5.874-.85z" transform="translate(-3 -3)" style="fill:#ededed"/>
+                            </svg>
+                        </div>
+                        <div class="credits">
+                            <h1>45 Credits</h1>
+                            <span>97 downloads</span>
+                        </div>
+                    </div>
+                    <div class="author">
+                        <div class="by">
+                            <img src="../src/assets/images/img_profile_5.png" alt="avatar">
+                            <span>By bmwing</span>
+                        </div>
+                        <div class="level">
+                            <img src="../src/assets/images/icon_beginner.png" alt="">
+                            <span>Advanced</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="list_item">
+                    <div class="list_item_header">
+                        <img class="badge" src="../src/assets/images/bedge.png" alt="badge">
+                        <div class="upload_date">
+                            <span>Upload date: 2021. 12. 01</span>
+                            <div class="bookmark_icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16.002" height="20" viewBox="0 0 16.002 20">
+                                    <path d="M20408.51 12897a2.243 2.243 0 0 1-1.15-.367l-4.5-2.709a1.827 1.827 0 0 0-1.723 0l-4.5 2.709a2.252 2.252 0 0 1-1.143.36 1.306 1.306 0 0 1-1.082-.54 2.5 2.5 0 0 1-.42-1.511v-14.086a3.72 3.72 0 0 1 3.557-3.856h8.881a3.736 3.736 0 0 1 3.564 3.856v14.086c.006 1.25-.58 2.058-1.484 2.058zm-6.508-10.33a.726.726 0 0 1 .371.093l1.139.676a1.32 1.32 0 0 0 .635.215.463.463 0 0 0 .375-.167 1.024 1.024 0 0 0 .08-.847l-.271-1.168a.834.834 0 0 1 .2-.691l.947-.942a.673.673 0 0 0-.4-1.25l-1.213-.2a.808.808 0 0 1-.533-.394l-.67-1.343c-.178-.352-.412-.545-.66-.545s-.479.193-.652.545l-.666 1.343a.811.811 0 0 1-.537.394l-1.209.2a.81.81 0 0 0-.7.47.8.8 0 0 0 .3.78l.943.942a.853.853 0 0 1 .2.691l-.273 1.168a1 1 0 0 0 .08.845.46.46 0 0 0 .375.166 1.308 1.308 0 0 0 .635-.212l1.137-.676a.759.759 0 0 1 .365-.093z" transform="translate(-20393.998 -12877)" style="fill:#fff"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="list_item_img">
+                        <img src="../src/assets/images/blueprints.png" alt="">
+                    </div>
+                    <div class="list_item_info">
+                        <h1>
+                            CANADA & USA > 2020 > CHRYSLER > PACIFICA > TOURING
+                        </h1>
+                        <span>OUT FRONT > BUMPER</span>
+                    </div>
+                    <div class="stars_block">
+                        <div class="stars">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16">
+                                <path d="m11.5 3 2.627 5.266 5.873.85-4.25 4.1 1 5.788-5.25-2.738L6.247 19l1-5.788L3 9.116l5.874-.85z" transform="translate(-3 -3)" style="fill:#ffd500"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16">
+                                <path d="m11.5 3 2.627 5.266 5.873.85-4.25 4.1 1 5.788-5.25-2.738L6.247 19l1-5.788L3 9.116l5.874-.85z" transform="translate(-3 -3)" style="fill:#ffd500"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16">
+                                <path d="m11.5 3 2.627 5.266 5.873.85-4.25 4.1 1 5.788-5.25-2.738L6.247 19l1-5.788L3 9.116l5.874-.85z" transform="translate(-3 -3)" style="fill:#ffd500"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16">
+                                <path d="m11.5 3 2.627 5.266 5.873.85-4.25 4.1 1 5.788-5.25-2.738L6.247 19l1-5.788L3 9.116l5.874-.85z" transform="translate(-3 -3)" style="fill:#ffd500"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16">
+                                <path d="m11.5 3 2.627 5.266 5.873.85-4.25 4.1 1 5.788-5.25-2.738L6.247 19l1-5.788L3 9.116l5.874-.85z" transform="translate(-3 -3)" style="fill:#ededed"/>
+                            </svg>
+                        </div>
+                        <div class="credits">
+                            <h1>50 Credits</h1>
+                            <span>201 downloads</span>
+                        </div>
+                    </div>
+                    <div class="author">
+                        <div class="by">
+                            <img src="../src/assets/images/img_profile_6.png" alt="avatar">
+                            <span>By youue</span>
+                        </div>
+                        <div class="level">
+                            <img src="../src/assets/images/icon_beginner.png" alt="">
+                            <span>Beginner</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="more">
+                <button class="btn more_btn">LOAD MORE</button>
+            </div>
+        </section>
+        <section class="free_trial">
+            <h1>TRY THE EDIT & PLOT FOR FREE FOR A MONTH.</h1>
+            <button class="btn free_trial_btn">Start now!</button>
+        </section>
+        <section class="about">
+            <div class="img_left_car"></div>
+            <div class="achive">
+                <div class="achive_icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="24" fill="currentColor" class="bi bi-award" viewBox="0 0 16 16">
+                        <path d="M9.669.864 8 0 6.331.864l-1.858.282-.842 1.68-1.337 1.32L2.6 6l-.306 1.854 1.337 1.32.842 1.68 1.858.282L8 12l1.669-.864 1.858-.282.842-1.68 1.337-1.32L13.4 6l.306-1.854-1.337-1.32-.842-1.68L9.669.864zm1.196 1.193.684 1.365 1.086 1.072L12.387 6l.248 1.506-1.086 1.072-.684 1.365-1.51.229L8 10.874l-1.355-.702-1.51-.229-.684-1.365-1.086-1.072L3.614 6l-.25-1.506 1.087-1.072.684-1.365 1.51-.229L8 1.126l1.356.702 1.509.229z"/>
+                        <path d="M4 11.794V16l4-1 4 1v-4.206l-2.018.306L8 13.126 6.018 12.1 4 11.794z"/>
+                      </svg>
+                </div>
+                <h1>
+                    The largest/first pattern marketplace for automotive film prefessionals in the world.
+                </h1>
+            </div>
+            <div class="pentool">
+                <div class="pentool_icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="27" height="19" viewBox="0 0 27 19">
+                        <path data-name="패스 15569" d="M3.271 9.542A2.271 2.271 0 1 0 1 7.271a2.271 2.271 0 0 0 2.271 2.271z" transform="translate(-.5 -3.364)" style="fill:none;stroke:#222;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10"/>
+                        <path data-name="패스 15570" d="M21.271 9.542A2.271 2.271 0 1 0 19 7.271a2.271 2.271 0 0 0 2.271 2.271z" transform="translate(2.958 -3.364)" style="fill:none;stroke:#222;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10"/>
+                        <path data-name="패스 15571" d="M20.051 7H15" transform="translate(1.907 -3.093)" style="fill:none;stroke:#222;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10"/>
+                        <path data-name="패스 15572" d="M10.051 7H5" transform="translate(.042 -3.093)" style="fill:none;stroke:#222;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10"/>
+                        <path data-name="패스 15573" d="M8.178 16.7v2.271a1.679 1.679 0 0 1-1.011 1.544 1.59 1.59 0 0 1-.693.159H4.2a1.7 1.7 0 0 1-1.7-1.7V16.7A1.7 1.7 0 0 1 4.2 15h2.274a1.7 1.7 0 0 1 1.704 1.7z" transform="translate(.703 -2.178)" style="fill:none;stroke:#222;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10"/>
+                        <path data-name="패스 15574" d="M22.178 16.7v2.271a1.7 1.7 0 0 1-1.7 1.7H18.2a1.59 1.59 0 0 1-.693-.159 1.679 1.679 0 0 1-1.007-1.538V16.7a1.7 1.7 0 0 1 1.7-1.7h2.271a1.7 1.7 0 0 1 1.707 1.7z" transform="translate(1.619 -2.178)" style="fill:none;stroke:#222;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10"/>
+                        <path data-name="패스 15575" d="M15.813 5.7v3.41a1.716 1.716 0 0 1-1.7 1.7H10.7A1.716 1.716 0 0 1 9 9.11V5.7A1.716 1.716 0 0 1 10.7 4h3.41a1.716 1.716 0 0 1 1.703 1.7z" transform="translate(1.093 -3.5)" style="fill:none;stroke:#222;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10"/>
+                        <path data-name="패스 15576" d="M15 7.73a8.523 8.523 0 0 1 4.269 7.6 4.944 4.944 0 0 1-.032.561" transform="translate(1.907 -3.066)" style="fill:none;stroke:#222;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10"/>
+                        <path data-name="패스 15577" d="M5.032 15.889A4.945 4.945 0 0 1 5 15.328a8.523 8.523 0 0 1 4.269-7.6" transform="translate(.824 -3.066)" style="fill:none;stroke:#222;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10"/>
+                    </svg>                    
+                </div>
+                <h1>
+                    Search for thousands of automotive patterns, customize to fit your needs, and plot online
+                    any film regardless of brand!
+                </h1>
+                <span>
+                    Donec vitae porta sapien, nec dictum sapien. Vivamus interdum dolor a ullamcorper congue. Curabitur non eleifend enim.
+                </span>
+            </div>
+            <div class="img_right"></div>
+            <div class="img_left_list"></div>
+            <div class="money">
+                <div class="money_icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25">
+                        <path data-name="패스 15594" d="M8.672 15.029a2.5 2.5 0 0 0 2.442 2.563h2.761a2.187 2.187 0 0 0 2.134-2.233 1.925 1.925 0 0 0-1.452-2.123L10.124 11.7a1.925 1.925 0 0 1-1.452-2.127 2.187 2.187 0 0 1 2.134-2.233h2.761A2.5 2.5 0 0 1 16.01 9.9" transform="translate(.168 .034)" style="fill:none;stroke:#222;stroke-linecap:round;stroke-linejoin:round"/>
+                        <path data-name="패스 15595" d="M12 6v13.2" transform="translate(.5 -.1)" style="fill:none;stroke:#222;stroke-linecap:round;stroke-linejoin:round"/>
+                        <path data-name="패스 15596" d="M12 22A10 10 0 1 0 2 12a10 10 0 0 0 10 10z" transform="translate(.5 .5)" style="fill:none;stroke:#222;stroke-linecap:round;stroke-linejoin:round"/>
+                        <path data-name="패스 15600" d="M14 26A12 12 0 1 0 2 14a12 12 0 0 0 12 12z" transform="translate(-1.5 -1.5)" style="fill:none;stroke:#222;stroke-linecap:round;stroke-linejoin:round"/>
+                    </svg>                    
+                </div>
+                <h1>Easily upload your own patterns and start making money now!</h1>
+                <span>
+                    Donec vitae porta sapien, nec dictum sapien. Vivamus interdum 
+                    dolor a ullamcorper congue. Curabitur non eleifend enim.
+                </span>
+            </div>
+        </section>
+        <section class="credid_packs">
+            <div class="title">
+                <h1>CREDIT PACKS</h1>
+                <span>Choose credit plan designed to meet your needs.</span>
+            </div>
+            <div class="packs">
+                <div class="pack">
+                    <div class="pack_header">
+                        <h1>STANDART</h1>
+                    </div>
+                    <div class="pack_body">
+                        <h1>$50</h1>
+                        <span>*VAT not included in prices.</span>
+                    </div>
+                    <div class="pack_bottom">
+                        <div class="price">50 Credit</div>
+                        <div class="total_price">
+                            <span>Total Credit</span>
+                            <h1>50 Credit</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="pack">
+                    <div class="pack_header">
+                        <h1>PLUS</h1>
+                    </div>
+                    <div class="pack_body">
+                        <h1>$100</h1>
+                        <span>*VAT not included in prices.</span>
+                    </div>
+                    <div class="pack_bottom">
+                        <div class="price">100 Credit + 5 Credit</div>
+                        <div class="total_price">
+                            <span>Total Credit</span>
+                            <h1>105 Credit</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="pack">
+                    <div class="pack_header">
+                        <h1>PREMIUM</h1>
+                    </div>
+                    <div class="pack_body">
+                        <h1>$250</h1>
+                        <span>*VAT not included in prices.</span>
+                    </div>
+                    <div class="pack_bottom">
+                        <div class="price">250 Credit + 20 Credit</div>
+                        <div class="total_price">
+                            <span>Total Credit</span>
+                            <h1>270 Credit</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="pack">
+                    <div class="pack_header">
+                        <h1>GOLD</h1>
+                    </div>
+                    <div class="pack_body">
+                        <h1>$1000</h1>
+                        <span>*VAT not included in prices.</span>
+                    </div>
+                    <div class="pack_bottom">
+                        <div class="price">1000 Credit + 130 Credit</div>
+                        <div class="total_price">
+                            <span>Total Credit</span>
+                            <h1>1130 Credit</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="footer">
+            <div class="top">
+                <div class="footer_logo">
+                    <img src="./assets/images/logo.webp" alt="logo">
+                </div>
+                <nav class="footer_menu_list">
+                    <ul>
+                        <li>PATTERN</li>
+                        <li>PRICING</li>
+                        <li>SUPPORT</li>
+                        <li>ULTRAFIT SHOP</li>
+                    </ul>
+                </nav>
+                <div class="social_media">
+                    <div class="instagram">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17.996" viewBox="0 0 18 17.996">
+                            <path data-name="Icon awesome-instagram" d="M9 6.622a4.614 4.614 0 1 0 4.614 4.614A4.607 4.607 0 0 0 9 6.622zm0 7.614a3 3 0 1 1 3-3 3.005 3.005 0 0 1-3 2.999zm5.879-7.8A1.076 1.076 0 1 1 13.8 5.357a1.074 1.074 0 0 1 1.076 1.076zm3.056 1.092a5.326 5.326 0 0 0-1.454-3.771A5.361 5.361 0 0 0 12.707 2.3c-1.486-.084-5.939-.084-7.425 0a5.353 5.353 0 0 0-3.771 1.45A5.343 5.343 0 0 0 .058 7.521c-.084 1.486-.084 5.939 0 7.425a5.326 5.326 0 0 0 1.454 3.771 5.368 5.368 0 0 0 3.77 1.453c1.486.084 5.939.084 7.425 0a5.326 5.326 0 0 0 3.771-1.454 5.361 5.361 0 0 0 1.454-3.771c.084-1.486.084-5.935 0-7.421zm-1.923 9.012a3.037 3.037 0 0 1-1.712 1.711c-1.185.47-4 .361-5.3.361s-4.124.1-5.3-.361a3.037 3.037 0 0 1-1.719-1.711c-.47-1.185-.361-4-.361-5.3s-.1-4.124.361-5.3a3.037 3.037 0 0 1 1.711-1.72c1.185-.47 4-.361 5.3-.361s4.124-.1 5.3.361a3.037 3.037 0 0 1 1.711 1.711c.47 1.185.361 4 .361 5.3s.118 4.129-.352 5.309z" transform="translate(.005 -2.238)" style="fill:#fff"/>
+                        </svg>                        
+                    </div>
+                    <div class="youtube">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="13.503" viewBox="0 0 18 13.503">
+                            <path data-name="Icon ionic-logo-youtube" d="M17.883 7.482a2.733 2.733 0 0 0-2.6-2.855c-1.95-.092-3.937-.127-5.966-.127h-.632c-2.025 0-4.015.035-5.963.127a2.739 2.739 0 0 0-2.6 2.862C.035 8.74 0 9.992 0 11.244s.035 2.5.12 3.759a2.742 2.742 0 0 0 2.6 2.866c2.046.095 4.145.137 6.28.134s4.23-.035 6.28-.134A2.743 2.743 0 0 0 17.879 15c.084-1.255.123-2.507.12-3.762s-.032-2.501-.116-3.756zm-10.6 7.212v-6.91l5.1 3.453z" transform="translate(0 -4.5)" style="fill:#fff"/>
+                        </svg>                        
+                    </div>
+                    <div class="facebook">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="9.641" height="18" viewBox="0 0 9.641 18">
+                            <path data-name="Icon awesome-facebook-f" d="m10.618 10.125.5-3.258H7.992V4.753a1.629 1.629 0 0 1 1.837-1.76h1.421V.22A17.329 17.329 0 0 0 8.728 0C6.153 0 4.471 1.56 4.471 4.385v2.482H1.609v3.258h2.862V18h3.521v-7.875z" transform="translate(-1.609)" style="fill:#fff"/>
+                        </svg>                        
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <span>©2021 INOGROW. All Rights Reserved.</span>
+                <span>E-mail: info@ultrafitprotection.com</span>
+            </div>
+        </footer>
+    </div>
+    
+    <script src="../src/assets/js/index.js"></script>
+</body>
+</html>

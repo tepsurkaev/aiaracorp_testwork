@@ -1,0 +1,140 @@
+.film_list > h1 {
+    text-align: center;
+    font-size: 34px;
+    margin-bottom: 60px;
+}
+.list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 1230px;
+    margin: 0 auto;
+}
+.list_item {
+    position: relative;
+    width: 380px;
+    height: 460px;
+    margin: 30px 15px 0 15px;
+    padding: 0 0 12px;
+    border-radius: 10px;
+    box-shadow: 0 8px 30px 0 rgba(165, 189, 213, 0.11);
+    background-color: #fff;
+}
+.badge {
+    position: absolute;
+    z-index: 999;
+}
+.upload_date {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+.upload_date > span {
+    margin: 0 10px 0 0;
+    font-size: 12px;
+    color: #222;
+}
+.bookmark_icon {
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    margin: 20px 20px 20px 10px;
+    padding: 10px 12px 10px 12px;
+    background-color: #ff6900;
+}
+.bookmark_icon_off {
+    background-color: #ededed;
+}
+.more_btn {
+    color: #fff;
+    padding: 20px 40px;
+    border-radius: 29px;
+    box-shadow: 0 8px 30px 0 rgba(0, 70, 166, 0.11);
+    background-color: #0046a6;
+}
+.bookmark_block {
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    margin: 20px 20px 20px 10px;
+    padding: 10px 12px 10px 12px;
+    background-color: #ff6900;
+}
+.list_item_img {
+    position: absolute;
+    top: 180px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.list_item_img > img {
+    width: 240px;
+}
+.list_item_info {
+    position: absolute;
+    top: 280px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.list_item_info > h1 {
+    width: 340px;
+    height: 40px;
+    margin: 30px 20px 10px;
+    font-size: 14px;
+    line-height: 1.57;
+    text-align: left;
+    color: #222;
+}
+.list_item_info > span {
+    width: 340px;
+    height: 15px;
+    margin: 10px 20px 20px;
+    font-size: 12px;
+    line-height: 1.83;
+    color: #808080;
+}
+.stars_block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    top: 350px;
+    width: 100%;
+    padding: 5px 15px;
+    border-bottom: 1px solid #ededed;
+    border-top: 1px solid #ededed;
+}
+.credits > h1 {
+    font-size: 18px;
+    text-align: right;
+    color: #0046a6;
+}
+.credits > span {
+    font-size: 12px;
+    text-align: right;
+    color: #808080;
+}
+.author {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    position: absolute;
+    bottom: 13px;
+}
+.author > .by,
+.author > .level {
+    display: flex;
+    align-items: center;
+}
+.author > .by {
+    margin-right: 113px;
+}
+.author > .by > img,
+.author > .level > img {
+    margin-right: 5px;
+}
+.more {
+    margin: 60px 0 100px 0;
+    text-align: center;
+}

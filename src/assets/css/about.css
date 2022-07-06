@@ -1,0 +1,103 @@
+.about {
+    display: flex;
+    flex-wrap: wrap;
+}
+.about > div {
+    width: 50%;
+}
+.about > .img_left_car {
+    width: 960px;
+    height: 600px;
+    object-fit: contain;
+    background: center url("../images/img_background.jpg");
+}
+.about > .achive {
+    padding: 243px 360px 243px 150px;
+    object-fit: contain;
+}
+.about > .achive > .achive_icon {
+    width: 50px;
+    height: 50px;
+    margin: 0 400px 10px 0;
+    padding: 13px 14px;
+    border-radius: 10px;
+    background-color: #e5efff;
+}
+.about > .achive > h1 {
+    width: 450px;
+    height: 54px;
+    margin: 10px 0 0;
+    font-size: 20px;
+    line-height: 1.5;
+    letter-spacing: normal;
+    text-align: left;
+    color: #222;
+}
+.about > .pentool {
+    padding: 192px 137px 0 360px;
+    object-fit: contain;
+}
+.about > .pentool > .pentool_icon {
+    width: 50px;
+    height: 50px;
+    margin: 0 400px 10px 0;
+    padding: 15px 10px;
+    border-radius: 10px;
+    background-color: #e5efff;
+}
+.about > .pentool > h1 {
+    width: 500px;
+    height: 84px;
+    font-size: 20px;
+    line-height: 1.5;
+    letter-spacing: normal;
+    text-align: left;
+    color: #222;
+    margin-bottom: 30px;
+}
+.about > .pentool > span {
+    font-size: 14px;
+    line-height: 1.71;
+    text-align: left;
+    color: #808080;
+}
+.about > .img_right {
+    width: 960px;
+    height: 600px;
+    object-fit: contain;
+    background: center no-repeat url("../images/img_right.png");
+    background-color: #e5efff;
+}
+.about > .img_left_list {
+    width: 960px;
+    height: 600px;
+    background: center no-repeat url("../images/img_left.png");
+    object-fit: contain;
+}
+.about > .money {
+    margin: 192px 0 0;
+    padding: 0 360px 0 141px;
+    object-fit: contain;
+    opacity: 0.9;
+}
+.about > .money > h1 {
+    width: 443px;
+    margin: 10px 16px 30px 0;
+    font-size: 20px;
+    line-height: 1.5;
+    text-align: left;
+    color: #222;
+}
+.about > .money > span {
+    font-size: 14px;
+    line-height: 1.71;
+    text-align: left;
+    color: #808080;
+}
+.about > .money > .money_icon {
+    width: 50px;
+    height: 50px;
+    padding: 12px;
+    border-radius: 10px;
+    background-color: #e5efff;
+}

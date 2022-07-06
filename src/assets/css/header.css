@@ -1,0 +1,32 @@
+.bg_header {
+    display: flex;
+    align-items: center;
+    width: 1920px;
+    height: 76px;
+    padding: 0 24px;
+    background-color: #fff;
+}
+.logo {
+    margin-right: 213px;
+}
+.menu_list {
+    padding: 0 20px;
+    margin-right: 575px;
+}
+.menu_list > ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+}
+.menu_list > ul > li {
+    margin-left: 60px;
+    font-size: 14px;
+    cursor: pointer;
+}
+.actions {
+    margin-right: 45px;
+}
+.edit_btn {
+    margin-right: 10px;
+}

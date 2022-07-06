@@ -1,0 +1,85 @@
+.credid_packs {
+    width: 1920px;
+    height: 679px;
+    padding: 100px 360px 140px;
+    object-fit: contain;
+    background: center no-repeat url("../images/img.png");
+}
+.credid_packs > .title {
+    text-align: center;
+}
+.credid_packs > .title > h1 {
+    margin: 0 199px 10px;
+    font-size: 34px;
+    font-weight: bold;
+    text-align: center;
+    color: #222;
+}
+.credid_packs > .title > span {
+    font-size: 16px;
+    color: #808080;
+}
+.credid_packs > .packs {
+    display: flex;
+}
+.credid_packs > .packs > .pack {
+    width: 270px;
+    height: 318px;
+    margin: 50px 40px 0 0;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 30px 0 rgba(165, 189, 213, 0.16);
+    border: solid 1px #ededed;
+    background-color: #fff;
+}
+.credid_packs > .packs > .pack > .pack_header {
+    font-size: 12px;
+    text-align: center;
+    color: #222;
+}
+.credid_packs > .packs > .pack > .pack_header:after {
+    content: '';
+    display: block;
+    width: 210px;
+    height: 1px;
+    margin: 20px 0;
+    background-color: #ededed;
+}
+.credid_packs > .packs > .pack > .pack_body:after {
+    content: '';
+    display: block;
+    width: 210px;
+    height: 1px;
+    margin: 20px 0;
+    background-color: #ededed;
+}
+.credid_packs > .packs > .pack > .pack_body > h1 {
+    font-size: 50px;
+    color: #ff6900;
+}
+.credid_packs > .packs > .pack > .pack_body > span {
+    font-size: 10px;
+    color: #808080;
+}
+.credid_packs > .packs > .pack > .pack_body {
+    text-align: center;
+}
+.credid_packs > .packs > .pack > .pack_bottom {
+    text-align: center;
+}
+.credid_packs > .packs > .pack > .pack_bottom > .price {
+    margin: 0 0 30px;
+    font-size: 12px;
+    text-align: center;
+    color: #222;
+}
+.credid_packs > .packs > .pack > .pack_bottom > .total_price > span {
+    font-size: 12px;
+    text-align: center;
+    color: #808080;
+}
+.credid_packs > .packs > .pack > .pack_bottom > .total_price > h1 {
+    font-size: 16px;
+    text-align: center;
+    color: #222;
+}

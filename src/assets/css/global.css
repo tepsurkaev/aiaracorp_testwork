@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #222;
+}
+.btn {
+    padding: 10px 20px;
+    border-radius: 6px;
+    border: 1px solid #0046a6;
+    outline: none;
+    cursor: pointer;
+    color: #0046a6;
+    background-color: transparent;
+    font-weight: bold;
+}
+.edit_btn:hover,
+.sell_btn:hover {
+    background-color: #0046a6;
+    color: #fff;
+}
